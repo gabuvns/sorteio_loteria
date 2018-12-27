@@ -47,10 +47,9 @@ void sorteio(){
     }
 
     //Setamos a seed deste modo para evitar que a seed se repita, como por exemplo quando se usa srand(time(NULL))
-    struct timespec seed;																	
-    clock_gettime(CLOCK_REALTIME, &seed);												
-    srand(seed.tv_nsec); 
-
+    
+    sleep(0.01);
+    srand(time(NULL));
 
     for(i=0;i<6;i++){
         sorteado = rand() % 60 + 1;
